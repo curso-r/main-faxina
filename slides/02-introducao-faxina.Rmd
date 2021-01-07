@@ -51,6 +51,31 @@ class: middle, center
 
 ---
 
+# Bases de dados
+
+Aula 01
+  - Base de municípios sem código 
+      - de-para
+      - inconsistências e lacunas
+  - Arquivos PDF serenata de amor
+      - pdftools 
+      - tabulizer
+      - extraindo dados de texto
+Aula 02
+  - Montando tabelas com os dados
+      - funcoes legais do purrr, tidyr, dplyr
+  - Preparando base para shiny
+      - reduzir tamanho de arquivo
+      - nested tibbles
+Aula 03
+  - Kaggle base retangular
+  - Kaggle base de textos
+
+
+
+
+---
+
 # Vamos ao R!
 
 ```{r, echo=FALSE, fig.align="center"}
