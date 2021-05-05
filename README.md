@@ -92,7 +92,9 @@ principal <- c(
   "padr",
   "rmarkdown",
   "openxlsx",
-  "writexl"
+  "writexl",
+  "stringdist",
+  "fuzzyjoin"
 )
 
 install.packages(principal)
