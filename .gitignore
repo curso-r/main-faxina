@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+exemplos_de_aula/10-dados-grandes-rfb.R
+exemplos_de_aula/11-case-rfb-sindec.R
+exemplos_de_aula/12-case-rfb-sindec-dash.R

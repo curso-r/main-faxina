@@ -18,19 +18,85 @@ abaixo**.
 
 -   O que são bases bagunças e arrumadas?
     -   Conceito de *tidy data*
-    -   Pacote `{janitor}`
--   Organizando projetos de faxina de dados
-    -   Pacotes e a pasta `data-raw`,
     -   Reprodutibilidade fraca e forte
+    -   Organizando projetos de faxina de dados
+-   Ferramentas úteis
+    -   Pacote `{janitor}`
+    -   Funções menos conhecidas do `{tidyverse}`
 -   Resolvendo problemas de importação
     -   Encoding
     -   Bases grandes
     -   PDF e OCR
-    -   Funções menos conhecidas do `{tidyverse}`
--   Melhores práticas para organização das colunas
-    -   Expressões regulares
--   Identificação de inconsistências nos dados
 -   Cases de preparação de dados
-    -   Base para aplicativo shiny
-    -   Base proveniente de textos
-    -   Base para modelagem
+
+# Plano de aulas
+
+**Aula 01**
+
+-   Organização de projetos
+-   Conceito de *tidy data*
+-   Faxina de dados da SSP
+    -   Problemas de encoding
+-   Faxina de dados em um projeto de consultoria
+
+**Aula 02**
+
+-   Pacote `{janitor}`
+-   Funções menos conhecidas do `{dplyr}` e do `{tidyr}`
+-   Funções de leitura de dados
+-   Faxina de dados em um projeto de consultoria (continuação)
+-   Leitura de dados em outros formatos
+    -   PDF e OCR
+    -   Json e HTML/XML
+-   Leitura de dados grandes
+    -   Dados da RFB ([brasil.io](https://brasil.io))
+
+**Aula 03**
+
+-   Integração de dados
+-   Fazendo um projeto completo do zero
+-   Atividades que não deu tempo de fazer
+
+## Pacotes necessários
+
+Este curso tem algumas dependências. Separamos em dois grupos de
+dependências:
+
+-   Principal: scripts principais do curso.
+-   Difíceis: pacotes que podem ser difíceis de instalar e que vamos
+    usar apenas em situações muito específicas. Tente instalar, mas se
+    não conseguir não se preocupe.
+
+``` r
+# Principal
+principal <- c(
+  "tidyverse",
+  "flexdashboard",
+  "fs",
+  "janitor",
+  "data.table",
+  "vroom",
+  "usethis",
+  "remotes",
+  "tictoc",
+  "reprex",
+  "padr",
+  "rmarkdown",
+  "openxlsx",
+  "writexl"
+)
+
+install.packages(principal)
+
+# Pacotes que podem ser mais dificeis de instalar
+# dependendo do seu sistema operacional
+dificeis <- c(
+  "arrow",
+  "tesseract",
+  "magick",
+  "pdftools",
+  "sf"
+)
+
+install.packages(dificeis)
+```

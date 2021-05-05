@@ -1,7 +1,5 @@
 # trabalhando com xml/html ------------------------------------------------
 
-xml2::read_html()
-
 # função mágica do pacote {rvest}: html_table()
 
 wiki_url <- "https://en.wikipedia.org/wiki/List_of_footballers_with_500_or_more_goals"
