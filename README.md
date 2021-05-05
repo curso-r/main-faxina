@@ -14,6 +14,15 @@ abaixo**.
 |:-------------|:------------------------------------------|:-------------------------------------------|
 | maio de 2021 | <https://curso-r.github.io/202105-faxina> | <https://github.com/curso-r/202105-faxina> |
 
+<div class="figure">
+
+<img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_3.jpg" alt="Imagem de Allison Horst." width="80%" />
+<p class="caption">
+Imagem de Allison Horst.
+</p>
+
+</div>
+
 # Ementa
 
 -   O que são bases bagunças e arrumadas?
