@@ -74,7 +74,7 @@ dependências:
 -   Principal: scripts principais do curso.
 -   Difíceis: pacotes que podem ser difíceis de instalar e que vamos
     usar apenas em situações muito específicas. Tente instalar, mas se
-    não conseguir não se preocupe.
+    não conseguir não se preocupe!
 
 ``` r
 # Principal
@@ -92,7 +92,9 @@ principal <- c(
   "padr",
   "rmarkdown",
   "openxlsx",
-  "writexl"
+  "writexl",
+  "stringdist",
+  "fuzzyjoin"
 )
 
 install.packages(principal)
