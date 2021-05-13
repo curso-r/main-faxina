@@ -9,7 +9,7 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID")),
        person(given = "Fernando",
            family = "Corrêa",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "fcorrea@curso-r.com",
            comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: Guarda os dados de roubo de veículos dispobilizados pela SSP-SP em formato tidy.
