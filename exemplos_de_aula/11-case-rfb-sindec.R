@@ -243,6 +243,9 @@ dados_rfb <- readr::read_delim_chunked(
 
 # legal! agora preciso sumarizar para obter os numeros finais
 
+# tab_nat <- qsacnpj::tab_natureza_juridica
+tab_nat <- readr::read_rds("dados/case/tab_nat.rds")
+
 tab_natureza <- da_sindec_empresas_arrumado %>% 
   dplyr::inner_join(
     dplyr::select(dados_rfb, cnpj, codigo_natureza_juridica), 
@@ -250,7 +253,7 @@ tab_natureza <- da_sindec_empresas_arrumado %>%
   ) %>% 
   dplyr::mutate(codigo_natureza_juridica = as.character(codigo_natureza_juridica)) %>% 
   dplyr::inner_join(
-    qsacnpj::tab_natureza_juridica,
+    tab_nat,
     c("codigo_natureza_juridica" = "cod_subclass_natureza_juridica")
   ) %>% 
   dplyr::group_by(nm_subclass_natureza_juridica) %>% 
