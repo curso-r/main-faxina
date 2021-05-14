@@ -10,9 +10,10 @@ Inscreva-se no curso: <https://www.curso-r.com/cursos/faxina>
 **Acesse o material completo do curso escolhendo uma das turmas
 abaixo**.
 
-| Turma        | Material                                  | Github                                     |
-|:-------------|:------------------------------------------|:-------------------------------------------|
-| maio de 2021 | <https://curso-r.github.io/202105-faxina> | <https://github.com/curso-r/202105-faxina> |
+| Turma           | Material                                  | Github                                     |
+|:----------------|:------------------------------------------|:-------------------------------------------|
+| outubro de 2021 | <https://curso-r.github.io/202110-faxina> | <https://github.com/curso-r/202110-faxina> |
+| maio de 2021    | <https://curso-r.github.io/202105-faxina> | <https://github.com/curso-r/202105-faxina> |
 
 <div class="figure">
 
