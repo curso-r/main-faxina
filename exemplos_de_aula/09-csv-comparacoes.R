@@ -15,6 +15,9 @@ httr::GET(
   httr::progress()
 )
 
+# caso você precise usar o arquivo localmente:
+# arquivo_temporario <- "dados/seu-caminho"
+
 # alternativa 1: readr::read_csv()
 # vantagens: flexível, intuitivo
 # desvantagens: lento
