@@ -2,3 +2,4 @@ exemplos_de_aula
 slides
 exercicios
 dados
+exemplo.pacote
