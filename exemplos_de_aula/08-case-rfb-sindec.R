@@ -12,12 +12,22 @@ da_sindec <- readr::read_csv2(path)
 
 # quais problemas?
 problemas <- readr::problems(da_sindec)
+nrow(problemas)
+problemas %>%
+  tibble::view()
+
+# Considerar NULL como NA
+
+da_sindec <- readr::read_csv2(path, na = c("NULL", "", "NA"))
+
+problemas <- readr::problems(da_sindec)
+nrow(problemas)
 problemas %>%
   tibble::view()
 
 # vamos ver as linhas
 linhas <- readr::read_lines(path)
-linhas_bugadas <- linhas[problemas$row + 1]
+linhas_bugadas <- linhas[unique(problemas$row)]
 stringr::str_count(linhas_bugadas, ";")
 
 # GATO NET!!!!
@@ -27,16 +37,19 @@ stringr::str_count(linhas_bugadas, ";") - stringr::str_count(linhas_bugadas, "; 
 
 # tivemos sorte! nem sempre é assim, mas segue o jogo
 
-linhas[problemas$row + 1] <- stringr::str_remove_all(linhas[problemas$row + 1], "; ")
+linhas[unique(problemas$row)] <- stringr::str_remove_all(linhas[unique(problemas$row)], "; ")
 
 da_sindec <- linhas %>%
   paste(collapse = "\n") %>%
-  readr::read_csv2() %>%
+  readr::read_csv2(na = c("NULL", "", "NA")) %>%
   janitor::clean_names()
 
-da_sindec %>%
-  dplyr::slice(problemas$row + 1) %>% View
+problemas <- readr::problems(da_sindec)
+nrow(problemas)
 
+da_sindec %>%
+  dplyr::slice(problemas$row) %>% 
+  tibble::view()
 
 # tidy --------------------------------------------------------------------
 
@@ -87,6 +100,8 @@ gg_mapa <- map_uf %>%
   ggplot2::geom_sf(ggplot2::aes(fill = p_atendida), colour = "black", size = .2)
 
 
+gg_mapa
+
 # 3. um grafico de barras de assuntos mais frequentes
 
 da_sindec %>%
@@ -131,6 +146,8 @@ gg_tema <- contagem_tema %>%
   ) %>%
   ggplot2::ggplot(ggplot2::aes(n, tema)) +
   ggplot2::geom_col()
+
+gg_tema
 
 # ainda tem muito a melhorar, mas vamos seguir.
 

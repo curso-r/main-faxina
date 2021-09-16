@@ -60,8 +60,6 @@ knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-il
 - Funções de leitura de dados
 - Faxina de dados em um projeto de consultoria (continuação) 
 - Leitura de dados em outros formatos
-    - PDF e OCR
-    - Json e HTML/XML
 - Leitura de dados grandes 
     - Dados da RFB ([brasil.io](https://brasil.io))
 
