@@ -18,9 +18,9 @@ httr::GET(
 # caso você precise usar o arquivo localmente:
 # arquivo_temporario <- "dados/seu-caminho"
 
-# alternativa 1: readr::read_csv()
+# alternativa 1: readr::read_csv(), nova versão que usa vroom como backend
 # vantagens: flexível, intuitivo
-# desvantagens: lento
+# desvantagens: não lê os dados de verdade, você paga o preço depois
 
 dados <- readr::read_csv(arquivo_temporario)
 
@@ -34,12 +34,6 @@ dados <- data.table::fread(arquivo_temporario)
 # desvantagens: muito novo!
 dados <- arrow::read_csv_arrow(arquivo_temporario)
 
-# alternativa 4: vroom::vroom()
-# vantagens: rapido(!!!), intuitivo
-# desvantagens: não lê os dados de verdade, você paga o preço depois
-dados <- vroom::vroom(arquivo_temporario)
-
-
 # comparação naive (não é um benchmark!)
 tictoc::tic()
 dados <- readr::read_csv(arquivo_temporario)
@@ -51,10 +45,6 @@ tictoc::toc()
 
 tictoc::tic()
 dados <- arrow::read_csv_arrow(arquivo_temporario)
-tictoc::toc()
-
-tictoc::tic()
-dados <- vroom::vroom(arquivo_temporario)
 tictoc::toc()
 
 # na prática: 
